@@ -9,6 +9,18 @@ function show(arr){
     }
 };
 
+function addObj(arr){
+
+    var newName = prompt('nome');
+    var newLastname = prompt('cognome');
+    var newAge = parseInt(prompt('età'));
+
+    var newObj = {'name': newName, 'lastname': newLastname, 'age': newAge};
+    arr.push(newObj)
+
+    console.log(arr);
+}
+
 
 function init(){
 
@@ -20,7 +32,8 @@ function init(){
         {'name': 'Tizio 5', 'lastname': 'Dei Tizi 5', 'age': 60}
     ];
 
-    show(students);
+    // show(students)
+    addObj(students)
 };
 
 $('document').ready(init)
