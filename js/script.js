@@ -1,23 +1,26 @@
-function show(obj){
-
-    for (var key in obj){
-
-        console.log(obj[key]);
-    };
+function show(arr){
     
+    for (var i=0; i<arr.length; i++){
+        
+        var obj = arr[i];
 
+        // loggo solo nome e cognome
+        console.log(Object.values(obj).splice(0,2));
+    }
 };
 
 
 function init(){
 
-    var students = {
-        'name' : 'Tizio',
-        'lastname': 'Dei Tizi',
-        'age' : 30
-    };
+    var students = [
+        {'name': 'Tizio 1', 'lastname': 'Dei Tizi 1', 'age': 20},
+        {'name': 'Tizio 2', 'lastname': 'Dei Tizi 2', 'age': 30},
+        {'name': 'Tizio 3', 'lastname': 'Dei Tizi 3', 'age': 40},
+        {'name': 'Tizio 4', 'lastname': 'Dei Tizi 4', 'age': 50},
+        {'name': 'Tizio 5', 'lastname': 'Dei Tizi 5', 'age': 60}
+    ];
 
-    show(students)
+    show(students);
 };
 
 $('document').ready(init)
